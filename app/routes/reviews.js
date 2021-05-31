@@ -32,7 +32,7 @@ router.post('/findAll', async(req, res) => {
 
 })
 
-router.get('/findOneUser', async(req, res) => {
+router.post('/findOneUser', async(req, res) => {
     try {
         const findOneReviews = await Review.find({"username":req.body.username});
         res.json({
